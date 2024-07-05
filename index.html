@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunshine Hotel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Sunshine Hotel</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Check Room Availability</h2>
+            <form id="check-form">
+                <label for="check-in">Check-in Date:</label>
+                <input type="date" id="check-in" name="check-in" required>
+                <label for="check-out">Check-out Date:</label>
+                <input type="date" id="check-out" name="check-out" required>
+                <button type="button" onclick="checkAvailability()">Check Availability</button>
+            </form>
+            <div id="availability-result"></div>
+        </section>
+
+        <section>
+            <h2>Reserve a Room</h2>
+            <form id="reserve-form" action="reserve.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="check-in-reserve">Check-in Date:</label>
+                <input type="date" id="check-in-reserve" name="check-in-reserve" required>
+                <label for="check-out-reserve">Check-out Date:</label>
+                <input type="date" id="check-out-reserve" name="check-out-reserve" required>
+                <button type="submit">Reserve</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sunshine Hotel</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
